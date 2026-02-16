@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Card(ABC):
+
     def __init__(self, name: str, cost: int, rarity: str) -> None:
         self.name = name
         self.cost = cost
@@ -12,7 +13,11 @@ class Card(ABC):
         pass
 
     def get_card_info(self) -> dict:
-        info = {"name": self.name, "cost": self.cost, "rarity": self.rarity}
+        info = {
+            "name": self.name,
+            "cost": self.cost,
+            "rarity": self.rarity
+        }
         return info
 
     def is_playable(self, available_mana: int) -> bool:
