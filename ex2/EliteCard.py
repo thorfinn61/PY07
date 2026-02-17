@@ -66,3 +66,6 @@ class EliteCard(Card, Combatable, Magical):
         return {
             "mana_pool": self.mana
         }
+
+    def __str__(self):
+        return f"{self.name} ({self.cost})"
